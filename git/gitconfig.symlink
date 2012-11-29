@@ -1,0 +1,13 @@
+[user]
+	name = Leo Correa
+	email = lcorr005@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[help]
+	autocorrect = 1

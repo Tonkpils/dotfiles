@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Installs homebrew
+
+echo "Checking for Homebrew installation..."
+if test ! $(which brew)
+then
+	echo "Installing homebrew"
+	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+	echo "Done installing homebrew"
+fi
+
+# Install grc and coreutils
+echo " Installing grc and coreutils " 
+brew install grc coreutils
+echo " Done installing "

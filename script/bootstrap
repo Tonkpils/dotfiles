@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# install all dotfiles
+
+if [ $(uname -s) = "Darwin" ] 
+then
+	. script/homebrew
+fi
+
+# Run the install
+rake install

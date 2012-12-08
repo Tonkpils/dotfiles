@@ -10,7 +10,7 @@ for config_file ($DOTFILES/**/*.zsh) source $config_file
 # look in ~/.oh-my-zsh/themes/
 # Set to "random", it'll load a random theme each 
 # time that oh-my-zsh is loaded
-ZSH_THEME='re5et'
+ZSH_THEME='tonkpils'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

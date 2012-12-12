@@ -2,7 +2,7 @@
 
 ## dotfiles
 
-These dot files are tailored to my own system. I will, however, be making edits as I find the need.
+My own dotfiles
 
 ## Requirements
 

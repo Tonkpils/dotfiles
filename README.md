@@ -2,11 +2,11 @@
 
 ## dotfiles
 
-These dot files are tailored to my own system. I will, however, be making edits as I find the need.
+My own dotfiles
 
-## requirements
+## Requirements
 
-As of now, I prefer using curl to get the current version of zsh and let the automatic installer do it's thing. So pretty much the only requirement is `curl` for now.
+I prefer using curl to get the current version of zsh and let the automatic installer do it's thing. So pretty much the only requirement is `curl` for now.
 
 ## Install
 

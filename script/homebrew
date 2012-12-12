@@ -10,7 +10,19 @@ then
 	echo "Done installing homebrew"
 fi
 
+echo "Updating brew"
+brew update
+
+echo "Upgrading formulas"
+brew upgrade
+
 # Install grc and coreutils
-echo " Installing grc and coreutils " 
+echo " Installing grc, coreutils, and node " 
 brew install grc coreutils
-echo " Done installing "
+brew install node
+echo " Done installing... "
+
+
+echo "Cleaning up outdated versions from cellar"
+brew cleanup
+

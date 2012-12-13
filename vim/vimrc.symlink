@@ -1,15 +1,14 @@
-" based on http://github.com/jferris/config_files/blob/master/vimrc
+" ------------------------------------------------------------------------
+" General
+" ------------------------------------------------------------------------
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible                              " essential
+set history=50                                " 50 lines of command history
+set backspace=indent,eol,start                " Allow backspacing over everything in insert mode
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
-set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching

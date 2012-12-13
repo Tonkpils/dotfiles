@@ -1,8 +1,17 @@
 require 'rake'
 require 'erb'
 
+desc 'Pull repository'
+task :pull do
+  "PULLING"
+  `git add .`
+  `git pull`
+end
+
+
 desc 'Hook dotfiles into system-standard positions.'
 task :install do
+  `git pull` # Update repository if necessary
   install_oh_my_zsh
   
   linkables = Dir.glob('*/**{.symlink}')

@@ -25,7 +25,7 @@
 	plain = normal
 [color "status"]
 	header = normal
-	added = red
+	added = magenta
 	updated = green
 	changed = yellow
 	untracked = red bold

@@ -13,6 +13,8 @@ alias tonkpils="cd ~/code/tonkpils"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias mydotfiles="cd ~/.dotfiles"
+alias unboxed="cd ~/unboxedlabs"
+alias soshial="cd ~/soshial"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"

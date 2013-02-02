@@ -1,6 +1,35 @@
+# Compiled source #
+###################
+
+# Packages #
+############
+
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS Generated Files #
+######################
 .DS_Store
+.DS_Store?
+._*
+
+# IDE Files #
+#############
+.idea/
+
+# Misc #
+########
 .svn
 *~
 *.swp
 *.rbc
-.idea/
+coverage/
+
+# Zeus Files #
+##############
+custom_plan.rb
+zeus.json

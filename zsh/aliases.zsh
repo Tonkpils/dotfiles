@@ -6,9 +6,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Shortcuts
-alias dcloud="cd ~/work/cloud"
-alias dplatform="cd ~/work/cloud/platform-auth"
-alias ddeveloper="cd ~/work/cloud/developer"
+alias dcld="cd ~/work/cloud"
 alias tonkpils="cd ~/code/tonkpils"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"

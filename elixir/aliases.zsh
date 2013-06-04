@@ -1,0 +1,1 @@
+alias iex='nocorrect iex'

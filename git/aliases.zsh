@@ -10,8 +10,3 @@
 
 # Git aliases
 alias git='/usr/local/bin/hub'
-alias gb='git branch'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gk='gitk --all 2> /dev/null &'

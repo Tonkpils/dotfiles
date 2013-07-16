@@ -1,1 +1,1 @@
-export go='nocorrect go'
+alias go='nocorrect go'

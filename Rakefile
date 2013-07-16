@@ -14,21 +14,21 @@ task :install do
   `git pull` # Update repository if necessary
   install_oh_my_zsh
   
-  linkables = Dir.glob('*/**{.symlink}')
+  symlinks = Dir.glob('*/**{.symlink}')
   
   skip_all = false
   overwrite_all = false
   backup_all = false
 
-  linkables.each do |linkable|
+  symlinks.each do |symlink|
     overwrite = false
     backup = false
 
-    file = linkable.split('/').last.split('.symlink').last
+    file = symlink.split('/').last.split('.symlink').last
     target = "#{ENV['HOME']}/.#{file}"
  
     if File.exists?(target) || File.symlink?(target)
-      unless skip_all || overwrite_all || backup_all
+      if !skip_all && !overwrite_all && !backup_all
         print "File already exists: #{target}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all: "
         case c = STDIN.gets.chomp
     	  when 'o' then overwrite = true
@@ -46,14 +46,14 @@ task :install do
     end
     break if skip_all 
     
-    `ln -s "$PWD/#{linkable}" "#{target}"`
+    `ln -s "$PWD/#{symlink}" "#{target}"`
   end
 end
 
 desc 'Revert changes done by installation'
 task :uninstall do
-  Dir.glob('**/*.symlink').each do |linkable|
-    file = linkable.split('/').last.split('.symlink').last
+  Dir.glob('**/*.symlink').each do |symlink|
+    file = symlink.split('/').last.split('.symlink').last
     target = "#{ENV['HOME']}/.#{file}"
 
     # Remove all symlinks created during installation

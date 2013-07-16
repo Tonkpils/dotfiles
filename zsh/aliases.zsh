@@ -12,10 +12,9 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias mydotfiles="cd ~/.dotfiles"
 alias unboxed="cd ~/unboxedlabs"
-alias soshial="cd ~/soshial"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g'
+alias update!='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g'

@@ -1,12 +1,10 @@
-# Tonkpils dotfiles
+# Dothory
 
-## dotfiles
-
-My own dotfiles
+My awesome configuration for my Mac.
 
 ## Requirements
 
-I prefer using curl to get the current version of zsh and let the automatic installer do it's thing. So pretty much the only requirement is `curl` for now.
+`curl`
 
 ## Install
 

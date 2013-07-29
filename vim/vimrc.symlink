@@ -18,7 +18,11 @@ map Q gq
 
 " Pathogen
 execute pathogen#infect()
-syntax on
+
+" Haskell
+"
+au Bufenter *.hs compiler ghc
+let g:haddock_browser = "~/Library/Application Support/Google/Chrome/Default"
 
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.

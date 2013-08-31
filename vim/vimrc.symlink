@@ -100,6 +100,11 @@ let mapleader = ","
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
+" Rspec Map
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
+
 " Leader shortcuts for Rails commands
 map <Leader>m :Rmodel 
 map <Leader>c :Rcontroller 

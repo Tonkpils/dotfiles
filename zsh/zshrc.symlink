@@ -29,7 +29,7 @@ ZSH_THEME='tonkpils'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundler rake)
+plugins=(git brew bundler rake dirspersist)
 
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
@@ -40,3 +40,6 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source ~/.env_vars
 
+
+# added by travis gem
+source /Users/leo/.travis/travis.sh

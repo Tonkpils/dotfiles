@@ -45,7 +45,14 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
-
+  
+  " NERDTree Settings
+  " Open nerd tree with every vim start up
+  " Map Ctrl + C to toggle 
+  " Close VIM if NERDTree is the last window open
+  autocmd vimenter * NERDTree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  noremap <C-N> :NERDTreeToggle<CR>
   " Set File type to 'text' for files ending in .txt
   autocmd BufNewFile,BufRead *.txt setfiletype text
 

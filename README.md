@@ -9,7 +9,7 @@ My awesome configuration for my Mac.
 ## Install
 
 ```sh 
-git clone https://github.com/Tonkpils/dotfiles.git ~/.dotfiles
+git clone --rescursive https://github.com/Tonkpils/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```

@@ -43,9 +43,10 @@ task :install do
     create_symlink("$PWD/#{symlink}", target)
   end
 
-
   setup_vim
   install_bin_scripts
+
+  warnings
 end
 
 desc 'Revert changes done by installation'
@@ -67,6 +68,13 @@ task :uninstall do
 end
 
 task :default => 'install'
+
+def warnings
+  puts 
+  puts
+  puts "NOTE======"
+  puts "Make sure you update .gitconfig with your user data"
+end
 
 def setup_vim
   vim_path   = File.expand_path('../vim', __FILE__)

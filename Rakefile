@@ -1,20 +1,14 @@
 require 'rake'
 require 'erb'
 
-desc 'Pull repository'
-task :pull do
-  "PULLING"
-  `git add .`
-  `git pull`
-end
-
+HOME_DIR = ENV['HOME']
 
 desc 'Hook dotfiles into system-standard positions.'
 task :install do
   `git pull` # Update repository if necessary
   install_oh_my_zsh
   
-  symlinks = Dir.glob('*/**{.symlink}')
+  symlinks = Dir.glob('**/*{.symlink}')
   
   skip_all = false
   overwrite_all = false
@@ -46,8 +40,12 @@ task :install do
     end
     break if skip_all 
     
-    `ln -s "$PWD/#{symlink}" "#{target}"`
+    create_symlink("$PWD/#{symlink}", target)
   end
+
+
+  setup_vim
+  install_bin_scripts
 end
 
 desc 'Revert changes done by installation'
@@ -69,6 +67,30 @@ task :uninstall do
 end
 
 task :default => 'install'
+
+def setup_vim
+  vim_path   = File.expand_path('../vim', __FILE__)
+  vimrc_path = File.expand_path('../vim/vimrc', __FILE__)
+  vim_target = File.join(HOME_DIR, '.vim')
+  vimrc_target = File.join(HOME_DIR, '.vimrc')
+  
+  create_symlink(vimrc_path, vimrc_target, "-sf") 
+  create_symlink(vim_path, vim_target, "-sfh")
+end 
+
+def create_symlink(source, target, options = '-s')
+  puts "ln #{options} #{source} #{target}"
+  `ln #{options} "#{source}" "#{target}"`
+end
+
+def install_bin_scripts
+  FileUtils.mkdir_p(File.join(HOME_DIR, "bin"))
+
+  Dir.glob("#{File.join(ENV['PWD'], "bin")}/**/*").each do |script|
+    target = File.join(HOME_DIR, "bin", script.split('/').last)
+    create_symlink(script, target, '-sfh')
+  end
+end
 
 def install_oh_my_zsh
   if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))

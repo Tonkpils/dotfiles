@@ -1,0 +1,38 @@
+set nocompatible				" essential
+
+execute pathogen#infect()
+
+set nowrap
+
+" Set tabs to 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+" Always display the status line
+set laststatus=2 
+
+if has("autocmd")
+  " Python
+  autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
+  
+  " NERDTree
+  " Close vim if NERDTree is the only window left open
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
+endif
+" Mappings
+"
+map <C-n> :NERDTreeToggle<CR>
+"
+" Insert Mode Maps
+"
+" ^F to insert file's name 
+imap <C-F> <C-R>=expand("%")<CR>
+          
+if executable("ack")
+  set grepprg=ack\ -H\ --nogroup\ --ignore-dir=tmp\ --ignore-dir=coverage
+endif
+
+" Line numbers
+set number
+set numberwidth=4

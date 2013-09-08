@@ -31,8 +31,10 @@ ZSH_THEME='tonkpils'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew bundler rake dirspersist)
 
+
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
+export PATH=$PATH:~/bin
 export EDITOR="subl -w"
 
 source $ZSH/oh-my-zsh.sh

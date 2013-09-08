@@ -12,7 +12,7 @@
 	url = git://github.com/mattonrails/vim-mix.git
 [submodule "vim/bundle/airline"]
 	path = vim/bundle/airline
-	url = git@github.com:bling/vim-airline.git
+	url = git://github.com/bling/vim-airline.git
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git

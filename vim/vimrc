@@ -36,3 +36,5 @@ endif
 " Line numbers
 set number
 set numberwidth=4
+
+let g:airline_section_b = '%{fugitive#statusline()}'

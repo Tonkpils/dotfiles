@@ -39,9 +39,11 @@ export EDITOR="subl -w"
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source ~/.env_vars
 
 
 # added by travis gem
 source /Users/leo/.travis/travis.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

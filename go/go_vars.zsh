@@ -1,3 +1,3 @@
-export GOROOT=/usr/local/Cellar/go/1.0.3
-export GOPATH=$GOROOT/bin
-export PATH=$PATH:$GOPATH
+export GOVERSION="1.1.2"
+export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION
+export PATH=$PATH:$GOPATH/bin

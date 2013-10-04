@@ -1,0 +1,1 @@
+alias rebar='nocorrect rebar'

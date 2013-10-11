@@ -4,18 +4,13 @@ execute pathogen#infect()
 
 set nowrap
 
-" Set tabs to 2 spaces
-" set tabstop=2
-" set shiftwidth=2
-" set softtabstop=2
-" set expandtab
 " Always display the status line
 set laststatus=2 
 
 if has("autocmd")
-  " Python
   autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
-  
+  autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
   " NERDTree
   " Close vim if NERDTree is the only window left open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
@@ -33,8 +28,14 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
 
+let mapleader = ","
+
+map <leader>tt :tabnew<cr>
+
+
 " Line numbers
 set number
 set numberwidth=4
 
 let g:airline_section_b = '%{fugitive#statusline()}'
+

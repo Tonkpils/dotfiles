@@ -22,3 +22,6 @@
 [submodule "vim/bundle/golang"]
 	path = vim/bundle/golang
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "vim/bundle/ruby"]
+	path = vim/bundle/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git

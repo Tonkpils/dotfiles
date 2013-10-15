@@ -1,3 +1,7 @@
+# Bundler #
+###########
+.bundle/
+
 # Compiled source #
 ###################
 

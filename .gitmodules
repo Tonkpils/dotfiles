@@ -25,3 +25,6 @@
 [submodule "vim/bundle/ruby"]
 	path = vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/sml-coursera"]
+	path = vim/bundle/sml-coursera
+	url = https://github.com/chilicuil/vim-sml-coursera.git

@@ -29,6 +29,9 @@ ZSH_THEME='tonkpils'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
+
+source $ZSH/oh-my-zsh.sh
+
 plugins=(git brew bundler rake dirspersist)
 
 
@@ -37,7 +40,6 @@ export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 export PATH=$PATH:~/bin
 export EDITOR="subl -w"
 
-source $ZSH/oh-my-zsh.sh
 
 source ~/.env_vars
 

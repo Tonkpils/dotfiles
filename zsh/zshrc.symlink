@@ -27,13 +27,10 @@ ZSH_THEME='tonkpils'
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
+source ~/.env_vars
 
-source $ZSH/oh-my-zsh.sh
-
-plugins=(git brew bundler rake dirspersist)
-
+# added by travis gem
+source /Users/leo/.travis/travis.sh
 
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
@@ -41,11 +38,12 @@ export PATH=$PATH:~/bin
 export EDITOR="subl -w"
 
 
-source ~/.env_vars
-
-
-# added by travis gem
-source /Users/leo/.travis/travis.sh
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git brew bundler rake dirspersist)
+
+source $ZSH/oh-my-zsh.sh
+

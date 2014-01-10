@@ -2,6 +2,8 @@
 	name = Leo Correa
 	email = lcorr005@gmail.com
 [alias]
+	wip = commit -am "WIP"
+	unwip = reset --mixed HEAD^
 	discard = checkout --
 	squash = merge --squash
 	unstage = reset HEAD --

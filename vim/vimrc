@@ -10,6 +10,8 @@ set laststatus=2
 if has("autocmd")
   autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
   autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+  autocmd FileType c setlocal shiftwidth=2 tabstop=2 expandtab
+  autocmd FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
 
   " NERDTree
   " Close vim if NERDTree is the only window left open

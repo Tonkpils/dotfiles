@@ -2,11 +2,15 @@
 	name = Leo Correa
 	email = lcorr005@gmail.com
 [alias]
+	cleanup = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	wip = commit -am "WIP"
 	unwip = reset --mixed HEAD^
+	uncommit = reset --soft HEAD^
 	discard = checkout --
 	squash = merge --squash
 	unstage = reset HEAD --
+	grep = grep -Ii
+	la = "!git config -l | grep alias | cut -c 7-"
 [color]
 	diff = auto
 	status = auto

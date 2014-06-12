@@ -5,17 +5,31 @@ execute pathogen#infect()
 set nowrap
 
 " Always display the status line
-set laststatus=2 
+set laststatus=2
+
+" WhiteSpace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
 
 if has("autocmd")
   autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
-  autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+  autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
   autocmd FileType c setlocal shiftwidth=2 tabstop=2 expandtab
   autocmd FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
-
+  autocmd FileType java set shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
   " NERDTree
   " Close vim if NERDTree is the only window left open
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  " White space madness
+  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+  autocmd BufWinLeave * call  clearmatches()
+  autocmd BufWritePre * :call TrimWhiteSpace()
 endif
 " Mappings
 "
@@ -23,9 +37,9 @@ map <C-n> :NERDTreeToggle<CR>
 "
 " Insert Mode Maps
 "
-" ^F to insert file's name 
+" ^F to insert file's name
 imap <C-F> <C-R>=expand("%")<CR>
-          
+
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif

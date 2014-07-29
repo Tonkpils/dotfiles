@@ -34,3 +34,9 @@
 [submodule "vim/bundle/c.vim"]
 	path = vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "vim/bundle/vim-instant-markdown"]
+	path = vim/bundle/vim-instant-markdown
+	url = git@github.com:suan/vim-instant-markdown.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = git@github.com:tpope/vim-markdown.git

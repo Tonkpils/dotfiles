@@ -1,11 +1,9 @@
 set nocompatible				" essential
+set t_Co=256 					" Enable 256 colors
 
 execute pathogen#infect()
 
-set nowrap
-
-" Always display the status line
-set laststatus=2
+colorscheme molokai
 
 " WhiteSpace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -31,13 +29,16 @@ if has("autocmd")
   autocmd BufWinLeave * call  clearmatches()
   autocmd BufWritePre * :call TrimWhiteSpace()
 endif
+
 " Mappings
 "
+let mapleader = "," 						" Remap leader to ','
 map <C-c> :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
-"
+map <leader>tt :tabnew<cr>
+
 " Insert Mode Maps
 "
 " ^F to insert file's name
@@ -47,15 +48,21 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
 
-let mapleader = ","
-
-map <leader>tt :tabnew<cr>
-
 " Line numbers
 set number
 set numberwidth=4
 
+" Airline Plugin
 let g:airline_section_b = '%{fugitive#statusline()}'
+let g:airline#extensions#tabline#enabled = 1
 
+" Go shortcuts
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
+
+" SuperTab Completion Plugin
+let g:SuperTabDefaultCompletionType = "context"
+
+" TagBar Plugin
+nmap <F4> :TagbarToggle<CR>
+

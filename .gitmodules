@@ -19,9 +19,6 @@
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/golang"]
-	path = vim/bundle/golang
-	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "vim/bundle/ruby"]
 	path = vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
@@ -40,3 +37,6 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = git@github.com:tpope/vim-markdown.git
+[submodule "vim/bundle/vim-go"]
+	path = vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git

@@ -2,6 +2,9 @@ set nocompatible				" essential
 
 execute pathogen#infect()
 
+syntax on
+
+let g:molokai_original = 1
 set nowrap
 
 " Always display the status line
@@ -33,7 +36,10 @@ if has("autocmd")
 endif
 " Mappings
 "
-map <C-n> :NERDTreeToggle<CR>
+map <C-c> :NERDTreeToggle<CR>
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+map <C-n> :tabnew<CR>
 "
 " Insert Mode Maps
 "
@@ -48,10 +54,11 @@ let mapleader = ","
 
 map <leader>tt :tabnew<cr>
 
-
 " Line numbers
 set number
 set numberwidth=4
 
 let g:airline_section_b = '%{fugitive#statusline()}'
 
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)

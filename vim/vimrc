@@ -5,6 +5,10 @@ execute pathogen#infect()
 
 colorscheme molokai
 
+" Never let vim write a backup file
+set nobackup
+set noswapfile
+
 " WhiteSpace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -38,7 +42,9 @@ map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
 map <leader>tt :tabnew<cr>
-
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Insert Mode Maps
 "
 " ^F to insert file's name

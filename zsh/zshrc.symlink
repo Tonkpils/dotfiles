@@ -27,10 +27,7 @@ ZSH_THEME='tonkpils'
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
-source ~/.env_vars
-
-# added by travis gem
-source /Users/leo/.travis/travis.sh
+[ -f ~/.env_vars ] && source ~/.env_vars
 
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin

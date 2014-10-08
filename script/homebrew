@@ -6,7 +6,7 @@ echo "Checking for Homebrew installation..."
 if test ! $(which brew)
 then
 	echo "Installing homebrew"
-	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	echo "Done installing homebrew"
 fi
 
@@ -17,7 +17,7 @@ echo "Upgrading formulas"
 brew upgrade
 
 # Install grc and coreutils
-echo " Installing grc, coreutils, and node " 
+echo " Installing grc, coreutils, and node "
 brew install grc coreutils
 brew install node
 echo " Done installing... "

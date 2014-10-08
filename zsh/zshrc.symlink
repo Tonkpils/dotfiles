@@ -6,9 +6,9 @@ DOTFILES=$HOME/.dotfiles
 # source all the zsh files
 for config_file ($DOTFILES/**/*.zsh) source $config_file
 
-# Set the name of the theme to load 
+# Set the name of the theme to load
 # look in ~/.oh-my-zsh/themes/
-# Set to "random", it'll load a random theme each 
+# Set to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded
 ZSH_THEME='tonkpils'
 
@@ -38,7 +38,7 @@ export PATH=$PATH:~/bin
 export EDITOR="subl -w"
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)

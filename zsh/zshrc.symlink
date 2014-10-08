@@ -32,8 +32,7 @@ ZSH_THEME='tonkpils'
 export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 export PATH=$PATH:~/bin
-export EDITOR="subl -w"
-
+export EDITOR="vim"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -43,3 +43,4 @@ plugins=(git brew bundler rake dirspersist)
 
 source $ZSH/oh-my-zsh.sh
 
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

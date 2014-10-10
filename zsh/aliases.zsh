@@ -7,7 +7,7 @@ alias ....="cd ../../.."
 
 # Shortcuts
 alias dcld="cd ~/work/cloud"
-alias tonkpils="cd ~/code/tonkpils"
+alias tonkpils="cd ~/code"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias mydotfiles="cd ~/.dotfiles"

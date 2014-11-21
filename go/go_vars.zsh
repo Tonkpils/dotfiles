@@ -1,4 +1,3 @@
-export GOVERSION="1.3.3"
-export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION
+export GOPATH=$HOME/code/golang
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin

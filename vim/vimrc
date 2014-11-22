@@ -37,7 +37,8 @@ endif
 
 " Mappings
 "
-let mapleader = "," 						" Remap leader to ','
+let mapleader = "\<Space>" 						" Remap leader to '<Space>'
+nnoremap <Leader>w :w<CR>
 map <C-c> :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
@@ -72,6 +73,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Vim-Go
 let g:go_fmt_command = "goimports"
+" Can't use this following option with goimports :(
+" let g:go_fmt_options = "-s"
 
 " TagBar Plugin
 nmap <F4> :TagbarToggle<CR>

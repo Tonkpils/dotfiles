@@ -18,6 +18,8 @@ function! TrimWhiteSpace()
 endfunction
 
 if has("autocmd")
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
   autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
   autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
   autocmd FileType c setlocal shiftwidth=2 tabstop=2 expandtab

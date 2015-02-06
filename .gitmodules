@@ -52,3 +52,15 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/Dockerfile.vim"]
+	path = vim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/vim-bundler"]
+	path = vim/bundle/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/html5.vim"]
+	path = vim/bundle/html5.vim
+	url = git@github.com:othree/html5.vim.git

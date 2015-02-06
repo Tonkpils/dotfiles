@@ -46,7 +46,7 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundler rake dirspersist)
+plugins=(git brew bundler rake dirspersist docker)
 
 source $ZSH/oh-my-zsh.sh
 

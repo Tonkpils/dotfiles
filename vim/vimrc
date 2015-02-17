@@ -17,30 +17,36 @@ function! TrimWhiteSpace()
   %s/\s\+$//e
 endfunction
 
-if has("autocmd")
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
 
-  autocmd FileType python set tabstop=4 |set shiftwidth=4|set expandtab
-  autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
-  autocmd FileType c setlocal shiftwidth=2 tabstop=2 expandtab
-  autocmd FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
-  autocmd FileType java set shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
-  autocmd FileType html set shiftwidth=2
-  autocmd Filetype eruby set shiftwidth=2
-  " NERDTree
-  " Close vim if NERDTree is the only window left open
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  " White space madness
-  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-  autocmd BufWinLeave * call  clearmatches()
-  autocmd BufWritePre * :call TrimWhiteSpace()
-endif
+au FileType python set tabstop=4 |set shiftwidth=4|set expandtab
+au FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
+au FileType c setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
+au FileType java set shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
+au FileType html set shiftwidth=2
+au Filetype eruby set shiftwidth=2
+
+" Go mappings
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+
+" NERDTree
+" Close vim if NERDTree is the only window left open
+au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" White space madness
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call  clearmatches()
+au BufWritePre * :call TrimWhiteSpace()
 
 " Mappings
 "
-let mapleader = "\<Space>" 						" Remap leader to '<Space>'
+let mapleader = "," 						" Remap leader to ','
 nnoremap <Leader>w :w<CR>
 map <C-c> :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
@@ -66,10 +72,6 @@ set numberwidth=4
 " Airline Plugin
 let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline#extensions#tabline#enabled = 1
-
-" Go shortcuts
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
 
 " SuperTab Completion Plugin
 let g:SuperTabDefaultCompletionType = "context"

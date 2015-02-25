@@ -51,3 +51,6 @@ plugins=(git brew bundler rake dirspersist docker)
 source $ZSH/oh-my-zsh.sh
 
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+$(boot2docker shellinit)
+

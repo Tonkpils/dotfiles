@@ -67,3 +67,9 @@
 [submodule "vim/bundle/vim-ansible-yaml"]
 	path = vim/bundle/vim-ansible-yaml
 	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "vim/bundle/SQLUtilities"]
+	path = vim/bundle/SQLUtilities
+	url = https://github.com/vim-scripts/SQLUtilities.git
+[submodule "vim/bundle/Align"]
+	path = vim/bundle/Align
+	url = https://github.com/vim-scripts/Align.git

@@ -41,6 +41,7 @@ Make this more agnostic to me...
       - sudo chmod ugo-x /usr/libexec/path_helper
   - brew install git
       - sudo mv /usr/bin/git /usr/bin/git-apple
+  - brew install gh
   - brew install mercurial
   - brew install redis
   - brew install postgres

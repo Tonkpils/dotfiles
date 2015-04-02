@@ -1,4 +1,1 @@
-if [[ -f $(which gh) ]]
-then
-	alias git=$(which gh)
-fi
+alias git=$(which gh)

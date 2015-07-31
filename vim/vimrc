@@ -1,9 +1,13 @@
 set nocompatible				" essential
 set t_Co=256 					" Enable 256 colors
 
+filetype off
+
 execute pathogen#infect()
 
 colorscheme molokai
+
+set autoread 					" No prompt for file changes outside Vim
 
 " Never let vim write a backup file
 set nobackup
@@ -19,13 +23,8 @@ endfunction
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
-au FileType python set tabstop=4 |set shiftwidth=4|set expandtab
 au FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
-au FileType c setlocal shiftwidth=2 tabstop=2 expandtab
 au FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
-au FileType java set shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
-au FileType html set shiftwidth=2
-au Filetype eruby set shiftwidth=2
 
 " Go mappings
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -37,6 +36,7 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 " NERDTree
 " Close vim if NERDTree is the only window left open
 au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " White space madness
 au BufWinEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
@@ -52,6 +52,7 @@ map <C-c> :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
+
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>

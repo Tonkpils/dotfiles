@@ -91,6 +91,7 @@ let g:go_highlight_build_constraints = 1
 
 " vim-jsx
 " See https://github.com/mxw/vim-jsx for options
+let g:jsx_ext_required = 0
 
 " vim-multiple-cursors
 " See https://github.com/terryma/vim-multiple-cursors

@@ -22,9 +22,6 @@
 [submodule "vim/bundle/ruby"]
 	path = vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/sml-coursera"]
-	path = vim/bundle/sml-coursera
-	url = https://github.com/chilicuil/vim-sml-coursera.git
 [submodule "vim/bundle/racket"]
 	path = vim/bundle/racket
 	url = https://github.com/wlangstroth/vim-racket.git

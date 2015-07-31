@@ -89,6 +89,9 @@ let g:go_highlight_build_constraints = 1
 " let javascript_enable_domhtmlcss=0
 " let b:javascript_fold
 
+" vim-jsx
+" See https://github.com/mxw/vim-jsx for options
+
 " TagBar Plugin
 nmap <F4> :TagbarToggle<CR>
 

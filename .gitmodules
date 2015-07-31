@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vitality.vim"]
 	path = vim/bundle/vitality.vim
 	url = git@github.com:sjl/vitality.vim.git
+[submodule "vim/bundle/vim-multiple-cursors"]
+	path = vim/bundle/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git

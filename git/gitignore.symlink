@@ -32,7 +32,4 @@
 *.rbc
 coverage/
 
-# Zeus Files #
-##############
-custom_plan.rb
-zeus.json
+.snag.yml

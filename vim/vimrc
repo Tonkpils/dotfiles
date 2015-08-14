@@ -23,8 +23,10 @@ endfunction
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
-au FileType javascript setlocal shiftwidth=2 softtabstop=2
-au FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 |set expandtab
+au FileType html.handlebars set shiftwidth=2 tabstop=2 |set expandtab
+au FileType css set shiftwidth=2 tabstop=2 |set expandtab
+au FileType javascript setlocal shiftwidth=2 tabstop | set expandtab
+au FileType ruby setlocal shiftwidth=2 tabstop=2 |set expandtab
 au FileType make set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
 
 " Go mappings

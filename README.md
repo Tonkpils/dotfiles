@@ -28,6 +28,7 @@ Plugins will be automatically loaded when vim starts.
 # TODO
 Make this more agnostic to me...
 
+- Install docker toolbox
 - Install brew-cask
   1. brew install caskroom/cask/brew-cask
 - Install google-chrome

@@ -23,6 +23,7 @@ endfunction
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
+au FileType eruby set shiftwidth=2 tabstop=2 |set expandtab
 au FileType html.handlebars set shiftwidth=2 tabstop=2 |set expandtab
 au FileType css set shiftwidth=2 tabstop=2 |set expandtab
 au FileType javascript setlocal shiftwidth=2 tabstop | set expandtab

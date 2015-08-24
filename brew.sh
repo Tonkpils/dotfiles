@@ -11,6 +11,7 @@ brew update && brew cask update
 
 brew cask install google-chrome
 brew cask install dockertoolbox
+brew cask install iterm2
 
 ## Upgrade any already-installed formulae.
 brew upgrade --all

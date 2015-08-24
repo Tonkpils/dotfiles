@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-WORKDIR=$(dirname "${BASH_SOURCE}");
-cd $WORKDIR;
+cd $(dirname "${BASH_SOURCE}");
 
 ## Install homebrew
 if  test ! $(which brew); then
@@ -9,13 +8,16 @@ if  test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-./$WORKDIR/brew.sh
+WORKDIR=$(pwd)
+
+# ./$WORKDIR/brew.sh
 
 git pull origin master;
 
 ## Install Symlinks
 echo "- Installing symlinks"
-for src in $(find -H $WORKDIR -maxdepth 2 -name '*.symlink'); do
+for src in $(find -H "$WORKDIR" -maxdepth 2 -name '*.symlink'); do
+  echo $src
   dst="$HOME/.$(basename "${src%.*}")"
   ln -s "$src" "$dst"
   echo "success linking $src to $dst"
@@ -23,8 +25,9 @@ done
 
 ## Setup vim
 echo "- Installing vim stuffs...."
+echo "$WORKDIR/vim/vimrc"
 ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
-ln -sfh "$WORKDIR/vim" "$HOME/.vimrc"
+ln -sfh "$WORKDIR/vim" "$HOME/.vim"
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "Oh My ZSH found at ~/.oh-my-zsh"

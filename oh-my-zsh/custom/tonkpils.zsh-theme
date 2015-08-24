@@ -8,6 +8,6 @@ RPS1='${return_code}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[magenta]%}%{$reset_color%}%{$fg_bold[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ±"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ?"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[red]%} ♥"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} 💩 "
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} 👻 "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[red]%} 🚀 "

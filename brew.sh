@@ -94,7 +94,7 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 brew install gh
-brew install mecurial
+brew install mercurial
 brew install redis
 brew install postgres
 brew install rust

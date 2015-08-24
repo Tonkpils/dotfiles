@@ -99,6 +99,7 @@ brew install redis
 brew install postgres
 brew install rust
 brew install go
+brew install node
 
 # Remove outdated versions from the cellar.
 brew cleanup

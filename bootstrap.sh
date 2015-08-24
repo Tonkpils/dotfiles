@@ -11,14 +11,7 @@ fi
 
 ./$WORKDIR/brew.sh
 
-# git pull origin master;
-
-if [ -d "$HOME/.oh-my-zsh" ]; then
-  echo "Oh My ZSH found at ~/.oh-my-zsh"
-else
-  echo "=== Installing Oh My Zsh ==="
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
+git pull origin master;
 
 ## Install Symlinks
 echo "- Installing symlinks"
@@ -32,4 +25,11 @@ done
 echo "- Installing vim stuffs...."
 ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
 ln -sfh "$WORKDIR/vim" "$HOME/.vimrc"
+
+if [ -d "$HOME/.oh-my-zsh" ]; then
+  echo "Oh My ZSH found at ~/.oh-my-zsh"
+else
+  echo "=== Installing Oh My Zsh ==="
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 

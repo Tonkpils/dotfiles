@@ -3,6 +3,9 @@ ZSH=$HOME/.oh-my-zsh
 
 DOTFILES=$HOME/.dotfiles
 
+## TODO put these in a more reasonable place...
+export PATH="$DOTFILES/bin:$PATH"
+
 # source all the zsh files
 for config_file ($DOTFILES/**/*.zsh) source $config_file
 

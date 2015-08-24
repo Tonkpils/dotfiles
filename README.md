@@ -28,30 +28,11 @@ Plugins will be automatically loaded when vim starts.
 # TODO
 Make this more agnostic to me...
 
-- Install docker toolbox
-- Install brew-cask
-  1. brew install caskroom/cask/brew-cask
-- Install google-chrome
-  1. brew cask install google-chrome
-- Install boot2docker
-  1. brew install boot2docker
-  2. brew cask install virtualbox
-  3. boot2docker init
 - Install stuff
   - See for requirements https://github.com/suan/vim-instant-markdown
       - sudo chmod ugo-x /usr/libexec/path_helper
   - brew install git
       - sudo mv /usr/bin/git /usr/bin/git-apple
-  - brew install gh
-  - brew install mercurial
-  - brew install redis
-  - brew install postgres
-  - brew install mongo
-  - brew install elixir
-  - brew install rust
-  - brew install go
-  - brew install erlang
-  - brew install imagemagick
 
 - mkdir -p ~/code/tonkpils
 - mkdir -p ~/work/cloud

@@ -1,1 +1,1 @@
-alias git=$(which gh)
+alias git=$(which hub)

@@ -9,8 +9,11 @@ brew install caskroom/cask/brew-cask
 
 brew update && brew cask update
 
+brew cask install java
+brew cask install slack
 brew cask install iterm2
 brew cask install google-chrome
+# TODO: install dockertoolbox and setup
 brew cask install dockertoolbox
 
 ## Upgrade any already-installed formulae.
@@ -43,6 +46,7 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+# requires Java
 brew install aircrack-ng
 brew install bfg
 brew install binutils

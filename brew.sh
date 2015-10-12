@@ -40,14 +40,7 @@ brew install wget --with-iri
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
@@ -76,30 +69,27 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
 brew install pv
-brew install rename
-brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
 brew install webkit2png
-brew install zopfli
-brew install gh
+brew install hub
 brew install mercurial
-brew install redis
-brew install postgres
+
+# Development languages
+brew install lua
 brew install rust
 brew install go
 brew install node
+
+# Development utilities
+brew install redis
+brew install postgres
+brew install elasticsearch
 
 # Remove outdated versions from the cellar.
 brew cleanup

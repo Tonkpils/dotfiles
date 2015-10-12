@@ -28,6 +28,7 @@ Plugins will be automatically loaded when vim starts.
 # TODO
 Make this more agnostic to me...
 
+- Setup SSH keys and add to Github and Heroku
 - Install stuff
   - See for requirements https://github.com/suan/vim-instant-markdown
       - sudo chmod ugo-x /usr/libexec/path_helper

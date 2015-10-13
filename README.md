@@ -36,7 +36,6 @@ Make this more agnostic to me...
       - sudo mv /usr/bin/git /usr/bin/git-apple
 
 - mkdir -p ~/code/tonkpils
-- mkdir -p ~/work/cloud
 - Ensure custom themes are installed after oh-my-zsh
 - Only load .env_vars if the file exists
   1. Maybe create .env_vars with instructions?

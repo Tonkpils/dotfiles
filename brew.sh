@@ -95,5 +95,8 @@ brew install redis
 brew install postgres
 brew install elasticsearch
 
+# Remote pairing
+brew tap nviennot/tmate && brew install tmate
+
 # Remove outdated versions from the cellar.
 brew cleanup

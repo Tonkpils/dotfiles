@@ -27,10 +27,12 @@ au FileType vim               set shiftwidth=2 tabstop=2 expandtab
 au FileType sh                set shiftwidth=2 tabstop=2 expandtab
 au FileType eruby             set shiftwidth=2 tabstop=2 expandtab
 au FileType html.handlebars   set shiftwidth=2 tabstop=2 expandtab
+au FileType coffee            set shiftwidth=2 tabstop=2 expandtab
 au FileType css               set shiftwidth=2 tabstop=2 expandtab
 au FileType javascript        set shiftwidth=2 tabstop=2 expandtab
 au FileType ruby              set shiftwidth=2 tabstop=2 expandtab
 au FileType html              set shiftwidth=2 tabstop=2 expandtab
+au FileType json              set shiftwidth=2 tabstop=2 expandtab
 au FileType make              set noexpandtab shiftwidth=2 tabstop=2 syntax=nasm
 
 " Go mappings

@@ -10,7 +10,7 @@ fi
 
 WORKDIR=$(pwd)
 
-# ./$WORKDIR/brew.sh
+./$WORKDIR/brew.sh
 
 git pull origin master;
 

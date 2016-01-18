@@ -28,6 +28,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'xolox/vim-misc'     "dependency for vim-notes
 Plugin 'xolox/vim-notes'
+Plugin 'ervandew/supertab'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 
 " Check these plugins out once more..
 " origin	git://github.com/othree/html5.vim.git (fetch)

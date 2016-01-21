@@ -2,6 +2,11 @@
 
 cd $(dirname "${BASH_SOURCE}");
 
+if [ ! -f $HOME/.env_vars ]; then
+  echo "=== Creating ~/.env_vars ==="
+  echo "# Exported environment variables in this file will be automatically loaded" >> $HOME/.env_vars
+fi
+
 ## Install homebrew
 if  test ! $(which brew); then
   echo "=== Installing Homebrew ==="

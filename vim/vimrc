@@ -30,7 +30,12 @@ Plugin 'xolox/vim-misc'     "dependency for vim-notes
 Plugin 'xolox/vim-notes'
 Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'dsawardekar/portkey'
+Plugin 'dsawardekar/ember.vim'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'sheerun/vim-polyglot'
 
 " Check these plugins out once more..
 " origin	git://github.com/othree/html5.vim.git (fetch)
@@ -39,7 +44,6 @@ Plugin 'mtscout6/vim-cjsx'
 " origin	git@github.com:kchmck/vim-coffee-script.git (fetch)
 " origin	git://github.com/suan/vim-instant-markdown.git (fetch)
 " origin	git://github.com/pangloss/vim-javascript.git (fetch)
-" origin	git@github.com:mxw/vim-jsx.git (fetch)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

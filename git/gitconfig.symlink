@@ -2,6 +2,7 @@
 	name = Leo Correa
 	email = lcorr005@gmail.com
 [alias]
+	srebase = "!f(){ git rebase --autosquash -i HEAD~$(git log --pretty=oneline $1..$2 | wc -l | xargs -o -n 1 echo); }; f"
 	undo = reset HEAD~1 --mixed
 	amend = commit -a --amend
 	cleanup = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"

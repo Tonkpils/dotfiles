@@ -1,11 +1,11 @@
-# Dothory
+# Dotfiles
 
 Some useful configurations for my development workflow
 
 ## Install
 
 ```sh
-$ git clone --recursive https://github.com/Tonkpils/dothory.git ~/.dotfiles
+$ git clone --recursive https://github.com/Tonkpils/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./bootstrap.sh
 ```

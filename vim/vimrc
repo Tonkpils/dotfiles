@@ -7,45 +7,51 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" defaults everyone can agree on
 Plugin 'tpope/vim-sensible'
+" lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" a git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
+" a GitHub extension for fugitive
 Plugin 'tpope/vim-rhubarb'
+" shows git diff in the gutter
 Plugin 'airblade/vim-gitgutter'
+" tree explorer
 Plugin 'scrooloose/nerdtree'
+" syntax checking hacks
 Plugin 'scrooloose/syntastic'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'rust-lang/rust.vim'
+" multiple selection Sublime style
 Plugin 'terryma/vim-multiple-cursors'
+" granular project configuration
 Plugin 'tpope/vim-projectionist'
+" quoting/parenthesizing made simple
+Plugin 'tpope/vim-surround'
+" helpers for UNIX
+Plugin 'tpope/vim-eunuch'
+" fuzzy file, buffer, mru, tag, etc finder
+Plugin 'ctrlpvim/ctrlp.vim'
+" perform all your vim insert mode completions with Tab
+Plugin 'ervandew/supertab'
+" navigate files at the speed of Vim
+Plugin 'dsawardekar/portkey'
+" a solid language pack
+Plugin 'sheerun/vim-polyglot'
+
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-eunuch'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'xolox/vim-misc'     "dependency for vim-notes
-Plugin 'xolox/vim-notes'
-Plugin 'ervandew/supertab'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'dsawardekar/portkey'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'dsawardekar/ember.vim'
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'sheerun/vim-polyglot'
-
-" Check these plugins out once more..
-" origin	git://github.com/othree/html5.vim.git (fetch)
-" origin	git://github.com/ervandew/supertab.git (fetch)
-" origin	git@github.com:mtscout6/vim-cjsx.git (fetch)
-" origin	git@github.com:kchmck/vim-coffee-script.git (fetch)
-" origin	git://github.com/suan/vim-instant-markdown.git (fetch)
-" origin	git://github.com/pangloss/vim-javascript.git (fetch)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,7 +79,8 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 colorscheme molokai
 
-set autoread 					" No prompt for file changes outside Vim
+" No prompt for file changes outside Vim
+set autoread
 
 " Never let vim write a backup file
 set nobackup
@@ -145,7 +152,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 
 " SuperTab Completion Plugin
-" let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
 
 " vim-go
 let g:go_fmt_command = "goimports"

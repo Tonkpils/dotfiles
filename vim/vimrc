@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'
@@ -135,13 +136,18 @@ set number
 set numberwidth=4
 
 " Airline Plugin
-let g:airline_section_b = '%{fugitive#statusline()}'
+" let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline#extensions#tabline#enabled = 1
+" auto populates the powerline fonts.
+" ensure powerline fonts are installed and iterm is using them as non ASCII
+" font
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " SuperTab Completion Plugin
 " let g:SuperTabDefaultCompletionType = "context"
 
-" Vim-Go
+" vim-go
 let g:go_fmt_command = "goimports"
 " let g:go_highlight_functions = 1
 " let g:go_highlight_methods = 1

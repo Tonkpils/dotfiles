@@ -51,6 +51,10 @@ filetype plugin indent on    " required
 
 syntax enable
 
+" causes issues when the syntax in the file contains mode line keywords
+" so we disable it
+set modelines=0
+
 " Syntastic options
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

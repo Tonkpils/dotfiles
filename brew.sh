@@ -2,10 +2,8 @@
 
 sudo -v
 
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 echo "- Installing cask"
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 brew update && brew cask update
 
@@ -13,8 +11,6 @@ brew cask install java
 brew cask install slack
 brew cask install iterm2
 brew cask install google-chrome
-# TODO: install dockertoolbox and setup
-brew cask install dockertoolbox
 
 ## Upgrade any already-installed formulae.
 brew upgrade --all
@@ -89,11 +85,6 @@ brew install lua
 brew install rust
 brew install go
 brew install node
-
-# Development utilities
-brew install redis
-brew install postgres
-brew install elasticsearch
 
 # Remote pairing
 brew tap nviennot/tmate && brew install tmate

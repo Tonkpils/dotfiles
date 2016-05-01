@@ -39,18 +39,10 @@ Plugin 'dsawardekar/portkey'
 " a solid language pack
 Plugin 'sheerun/vim-polyglot'
 
-Plugin 'rust-lang/rust.vim'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
-Plugin 'fatih/vim-go'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'dsawardekar/ember.vim'
 
 " All of your Plugins must be added before the following line

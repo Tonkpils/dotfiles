@@ -50,9 +50,5 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # - git-flow-avh
 plugins=(git bundler rake dirspersist docker docker-compose colored-man-pages ember-cli emoji gpg-agent history iwhois postgres)
 
+
 source $ZSH/oh-my-zsh.sh
-
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-eval "$(docker-machine env dev)"
-

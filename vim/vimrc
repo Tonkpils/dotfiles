@@ -39,6 +39,8 @@ Plugin 'dsawardekar/portkey'
 " a solid language pack
 Plugin 'sheerun/vim-polyglot'
 
+Plugin 'fatih/vim-go'
+
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
@@ -60,15 +62,6 @@ set modelines=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0             " Don't check on open
-let g:syntastic_check_on_wq = 0
-let g:syntastic_html_tidy_exec = 'tidy5'      " Use HTML5
-" fixes opening golang files with syntastic
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 colorscheme molokai
 
@@ -146,6 +139,16 @@ let g:airline_theme='powerlineish'
 
 " SuperTab Completion Plugin
 let g:SuperTabDefaultCompletionType = "context"
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0             " Don't check on open
+let g:syntastic_check_on_wq = 0
+let g:syntastic_html_tidy_exec = 'tidy5'      " Use HTML5
+" fixes opening golang files with syntastic
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
 
 " vim-go
 let g:go_fmt_command = "goimports"

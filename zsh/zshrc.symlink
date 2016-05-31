@@ -37,9 +37,6 @@ export PATH="$PATH:/usr/local/heroku/bin"
 export PATH="$PATH:/usr/local/texlive/2012/bin/universal-darwin"
 export PATH="/usr/local/bin:$PATH"
 
-# Preferred editor for local and remote sessions
-export EDITOR='vim'
-
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -48,7 +45,44 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Possible plugins
 # - frontend-search
 # - git-flow-avh
-plugins=(vi-mode git bundler rake dirspersist docker docker-compose colored-man-pages ember-cli emoji gpg-agent history iwhois postgres)
-
+plugins=(git bundler rake dirspersist docker docker-compose colored-man-pages ember-cli emoji gpg-agent history iwhois postgres)
 
 source $ZSH/oh-my-zsh.sh
+
+# Preferred editor for local and remote sessions
+export VISUAL='vim'
+export EDITOR=$VISUAL
+
+# vi mode
+bindkey -v
+bindkey "^F" vi-cmd-mode
+
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^K" kill-line
+bindkey "^R" history-incremental-search-backward
+bindkey "^P" history-search-backward
+bindkey "^Y" accept-and-hold
+bindkey "^N" insert-last-word
+
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+
+bindkey ' ' magic-space
+
+if [[ "${terminfo[kcbt]}" != "" ]]; then
+  bindkey "${terminfo[kcbt]}" reverse-menu-complete
+fi
+
+bindkey '^?' backward-delete-char
+bindkey '^D' delete-char

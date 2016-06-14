@@ -4,6 +4,3 @@ alias reload!='. ~/.zshrc'
 alias tonkpils="cd ~/code"
 alias gocode="cd $GOPATH/src"
 
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
-

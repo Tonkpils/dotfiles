@@ -130,6 +130,10 @@ imap <C-F> <C-R>=expand("%")<CR>
 set number
 set numberwidth=4
 
+" CTRL+P
+let g:ctrlp_custom_ignore='.git$|\tmp$|\node_modules$'
+let g:ctrlp_max_files=100000
+
 " Airline Plugin
 " let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline#extensions#tabline#enabled = 1

@@ -82,6 +82,8 @@ endfunction
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
+set shiftwidth=2 tabstop=2 expandtab
+
 au FileType vim               set shiftwidth=2 tabstop=2 expandtab
 au FileType sh                set shiftwidth=2 tabstop=2 expandtab
 au FileType eruby             set shiftwidth=2 tabstop=2 expandtab

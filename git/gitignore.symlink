@@ -33,3 +33,11 @@ tags
 coverage/
 
 .snag.yml
+.byebug_history
+
+# Dropbox settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache
+Icon
+

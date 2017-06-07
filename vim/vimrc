@@ -48,6 +48,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'dsawardekar/ember.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'jaxbot/browserlink.vim'
+Plugin 'jparise/vim-graphql'
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -135,6 +138,17 @@ set numberwidth=4
 let g:ctrlp_custom_ignore='.git$|\tmp$|\node_modules$'
 let g:ctrlp_max_files=100000
 
+" Ctrl-P
+" let g:ctrlp_show_hidden=1
+let g:ctrlp_max_files=50000
+let g:ctrlp_clear_cache_on_exit=0
+let image_fts = ['ico', 'jpg', 'jpeg', 'png', 'gif', 'pdf', 'svg']
+unlet g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = {
+      \ 'file': '\v\.(' . join(image_fts, '|') . ')$',
+      \ 'dir':  '\v[\/](node_modules|target|dist)|(\.(swp|git))$'
+      \ }
+
 " Airline Plugin
 " let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline#extensions#tabline#enabled = 1
@@ -170,6 +184,8 @@ let g:go_highlight_build_constraints = 1
 " vim-jsx
 " See https://github.com/mxw/vim-jsx for options
 let g:jsx_ext_required = 0
+
+autocmd BufNewFile,BufRead Envfile set filetype=ruby
 
 autocmd InsertEnter,InsertLeave * set cul!
 if $TERM_PROGRAM =~ "iTerm"

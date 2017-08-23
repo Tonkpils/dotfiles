@@ -13,9 +13,18 @@ if  test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-WORKDIR=$(pwd)
 
-./$WORKDIR/brew.sh
+echo "=== Checking brew bundle ==="
+brew bundle check &> /dev/null
+if [ -z $? ]
+then
+  echo "=== Brews already installed ==="
+else
+  echo "=== Installing brew bundle ==="
+  brew bundle install
+fi
+
+WORKDIR=$(pwd)
 
 git pull origin master;
 
@@ -32,7 +41,8 @@ done
 echo "- Installing vim stuffs...."
 echo "$WORKDIR/vim/vimrc"
 ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
-ln -sfh "$WORKDIR/vim" "$HOME/.vim"
+echo "- Linking vim directory"
+ln -sfh "$WORKDIR/vim/" "$HOME/.vim"
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "Oh My ZSH found at ~/.oh-my-zsh"

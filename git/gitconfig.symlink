@@ -46,3 +46,7 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+[github]
+	user = Tonkpils
+[credential]
+	helper = osxkeychain

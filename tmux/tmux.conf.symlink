@@ -1,7 +1,29 @@
-unbind C-b
+# remap prefix to Control + a
 set -g prefix C-a
-set -g status-bg '#666666'
-set -g status-fg '#aaaaaa'
-set -g history-limit 10000
+unbind C-b
+bind C-a send-prefix
 
+# force a reload of the config file
+unbind r
+bind r source-file ~/.tmux.conf
 
+setw -g mode-keys vi
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# switch panes using Alt-arrow without prefix
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Enable mouse control (clickable windows, panes, resizable panes)
+set -g mouse on
+
+# set -g status-bg '#666666'
+# set -g status-fg '#aaaaaa'
+# set -g history-limit 10000

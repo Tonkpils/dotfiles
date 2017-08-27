@@ -7,6 +7,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" async build and test dispatcher
+Plugin 'tpope/vim-dispatch'
 " defaults everyone can agree on
 Plugin 'tpope/vim-sensible'
 " lean & mean status/tabline for vim

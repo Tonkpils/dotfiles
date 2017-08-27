@@ -14,6 +14,10 @@ If certain files are already in place it will ask to overwrite or back them up. 
 
 ## Reminders
 
+### Tmux Plugins
+
+Ensure you run C-I in a tmux session to install all plugins
+
 ### Adding Vim Plugins
 
 Plugins are managed through Vundle. The list of plugins can be found in `vim/vimrc`.

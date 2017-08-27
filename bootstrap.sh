@@ -44,6 +44,11 @@ ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
 echo "- Linking vim directory"
 ln -sfh "$WORKDIR/vim/" "$HOME/.vim"
 
+## Setup Tmux
+mkdir -p $HOME/.tmux/plugins/
+rm -rf $HOME/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "Oh My ZSH found at ~/.oh-my-zsh"
 else

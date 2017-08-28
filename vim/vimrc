@@ -7,10 +7,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" async build and test dispatcher
-Plugin 'tpope/vim-dispatch'
 " defaults everyone can agree on
 Plugin 'tpope/vim-sensible'
+" async build and test dispatcher
+Plugin 'tpope/vim-dispatch'
 " lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -30,8 +30,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-projectionist'
 " quoting/parenthesizing made simple
 Plugin 'tpope/vim-surround'
-" helpers for UNIX
-Plugin 'tpope/vim-eunuch'
 " fuzzy file, buffer, mru, tag, etc finder
 Plugin 'ctrlpvim/ctrlp.vim'
 " perform all your vim insert mode completions with Tab
@@ -47,10 +45,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
-Plugin 'dsawardekar/ember.vim'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'jaxbot/browserlink.vim'
 Plugin 'jparise/vim-graphql'
 Plugin 'editorconfig/editorconfig-vim'
 

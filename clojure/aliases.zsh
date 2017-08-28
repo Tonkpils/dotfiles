@@ -1,1 +1,0 @@
-alias lein='nocorrect lein'

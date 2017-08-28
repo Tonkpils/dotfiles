@@ -1,1 +1,0 @@
-alias rebar='nocorrect rebar'

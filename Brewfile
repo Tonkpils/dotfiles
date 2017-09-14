@@ -1,5 +1,9 @@
 cask "iterm2"
 cask "slack"
+cask "docker"
+cask "virtualbox"
+cask "minikube"
+cask "google-cloud-sdk"
 
 brew "coreutils"
 

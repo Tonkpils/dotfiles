@@ -1,5 +1,7 @@
-unlet! skip_defaults_vim
-source $VIMRUNTIME/defaults.vim
+if filereadable("SpecificFile")
+  unlet! skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+endif
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

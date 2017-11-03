@@ -38,11 +38,14 @@ for src in $(find -H "$WORKDIR" -maxdepth 2 -name '*.symlink'); do
 done
 
 ## Setup vim
-echo "- Installing vim stuffs...."
+echo "- Configuring editors (vim/neovim)"
 echo "$WORKDIR/vim/vimrc"
 ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
-echo "- Linking vim directory"
+echo "-- Linking vim directory"
 ln -sfh "$WORKDIR/vim/" "$HOME/.vim"
+echo "-- Linking nvim configuration"
+mkdir -p "$HOME/.config/nvim"
+ln -sfh "$WORKDIR/nvim/init.vim"  "$HOME/.config/nvim/init.vim"
 
 ## Setup Tmux
 mkdir -p $HOME/.tmux/plugins/

@@ -1,6 +1,6 @@
-set nocompatible				" essential
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
 
-filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 

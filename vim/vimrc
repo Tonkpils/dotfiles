@@ -3,57 +3,51 @@ if filereadable("SpecificFile")
   source $VIMRUNTIME/defaults.vim
 endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+packadd minpac
+call minpac#init()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 " defaults everyone can agree on
-Plugin 'tpope/vim-sensible'
+call minpac#add('tpope/vim-sensible')
 " async build and test dispatcher
-Plugin 'tpope/vim-dispatch'
+call minpac#add('tpope/vim-dispatch')
 " lean & mean status/tabline for vim
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline-themes')
 " a git wrapper so awesome, it should be illegal
-Plugin 'tpope/vim-fugitive'
+call minpac#add('tpope/vim-fugitive')
 " a GitHub extension for fugitive
-Plugin 'tpope/vim-rhubarb'
+call minpac#add('tpope/vim-rhubarb')
 " shows git diff in the gutter
-Plugin 'airblade/vim-gitgutter'
+call minpac#add('airblade/vim-gitgutter')
 " tree explorer
-Plugin 'scrooloose/nerdtree'
+call minpac#add('scrooloose/nerdtree')
 " syntax checking hacks
-Plugin 'scrooloose/syntastic'
+call minpac#add('scrooloose/syntastic')
 " multiple selection Sublime style
-Plugin 'terryma/vim-multiple-cursors'
+call minpac#add('terryma/vim-multiple-cursors')
 " granular project configuration
-Plugin 'tpope/vim-projectionist'
+call minpac#add('tpope/vim-projectionist')
 " quoting/parenthesizing made simple
-Plugin 'tpope/vim-surround'
+call minpac#add('tpope/vim-surround')
 " fuzzy file, buffer, mru, tag, etc finder
-Plugin 'ctrlpvim/ctrlp.vim'
+call minpac#add('ctrlpvim/ctrlp.vim')
 " perform all your vim insert mode completions with Tab
-Plugin 'ervandew/supertab'
+call minpac#add('ervandew/supertab')
 " navigate files at the speed of Vim
-Plugin 'dsawardekar/portkey'
+call minpac#add('dsawardekar/portkey')
 " a solid language pack
-Plugin 'sheerun/vim-polyglot'
+call minpac#add('sheerun/vim-polyglot')
 
-Plugin 'fatih/vim-go'
+call minpac#add('fatih/vim-go')
 
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'jparise/vim-graphql'
-Plugin 'editorconfig/editorconfig-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-rake')
+call minpac#add('tpope/vim-bundler')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('jiangmiao/auto-pairs')
+call minpac#add('jparise/vim-graphql')
+call minpac#add('editorconfig/editorconfig-vim')
 
 syntax enable
 

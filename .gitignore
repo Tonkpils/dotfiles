@@ -1,3 +1,4 @@
 .netrwhist
-vim/bundle/**
+vim/pack/**
+!vim/pack/minpac/opt/
 

@@ -21,4 +21,5 @@ brew "imagemagick", args: ["with-webp"]
 brew "tree"
 brew "hub"
 
+brew "python3"
 brew "go"

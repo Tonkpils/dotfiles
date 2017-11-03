@@ -41,11 +41,13 @@ done
 echo "- Configuring editors (vim/neovim)"
 echo "$WORKDIR/vim/vimrc"
 ln -sf "$WORKDIR/vim/vimrc" "$HOME/.vimrc"
-echo "-- Linking vim directory"
+echo "-- Setting up vim"
 ln -sfh "$WORKDIR/vim/" "$HOME/.vim"
-echo "-- Linking nvim configuration"
+echo "-- Setting up nvim"
 mkdir -p "$HOME/.config/nvim"
 ln -sfh "$WORKDIR/nvim/init.vim"  "$HOME/.config/nvim/init.vim"
+echo "--- Installing python3 support for neovim"
+pip3 install --user --upgrade neovim
 
 ## Setup Tmux
 mkdir -p $HOME/.tmux/plugins/

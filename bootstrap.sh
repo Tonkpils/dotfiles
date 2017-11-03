@@ -46,8 +46,10 @@ ln -sfh "$WORKDIR/vim/" "$HOME/.vim"
 echo "-- Setting up nvim"
 mkdir -p "$HOME/.config/nvim"
 ln -sfh "$WORKDIR/nvim/init.vim"  "$HOME/.config/nvim/init.vim"
-echo "--- Installing python3 support for neovim"
+echo "--- Installing python3 support"
 pip3 install --user --upgrade neovim
+echo "--- Installing ruby support"
+gem install "neovim"
 
 ## Setup Tmux
 mkdir -p $HOME/.tmux/plugins/

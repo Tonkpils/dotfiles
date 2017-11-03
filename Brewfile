@@ -12,6 +12,7 @@ brew "gpg-agent"
 
 brew "tmux"
 brew "vim", args: ["override-system-vi"]
+brew "nvim"
 
 brew "ripgrep"
 brew "git"

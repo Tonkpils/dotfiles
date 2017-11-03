@@ -48,7 +48,6 @@ plugins=(git bundler rake dirspersist docker docker-compose colored-man-pages em
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
-export VISUAL='vim'
 export EDITOR=$VISUAL
 
 # vi mode

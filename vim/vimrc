@@ -9,6 +9,7 @@ call minpac#add('tpope/vim-dispatch')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('w0rp/ale')
 call minpac#add('mhinz/vim-grepper')
+call minpac#add('janko-m/vim-test')
 
 " lean & mean status/tabline for vim
 call minpac#add('vim-airline/vim-airline')
@@ -63,6 +64,9 @@ nmap <silent> ]W <Plug>(ale_last)
 " Grepper
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
+
+" Vim-test
+let test#strategy = "dispatch"
 
 syntax enable
 

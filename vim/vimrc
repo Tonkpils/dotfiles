@@ -47,6 +47,11 @@ call minpac#add('editorconfig/editorconfig-vim')
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
+set undofile
+augroup vimrc
+  autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
+
 " ensure fzf is installed in homebrew
 set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_COMMAND='rg --files'

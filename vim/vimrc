@@ -8,6 +8,7 @@ call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('w0rp/ale')
+call minpac#add('mhinz/vim-grepper')
 
 " lean & mean status/tabline for vim
 call minpac#add('vim-airline/vim-airline')
@@ -49,15 +50,19 @@ set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_COMMAND='rg --files'
 
 " ALE syntax checking
-" For JavaScript files, use `eslint` (and only eslint)
+"" For JavaScript files, use `eslint` (and only eslint)
 let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ }
-" Mappins in the style of unimpaired-next
+"" Mappins in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+" Grepper
+let g:grepper = {}
+let g:grepper.tools = ['grep', 'git', 'rg']
 
 syntax enable
 
@@ -127,6 +132,15 @@ au BufWritePre * :call TrimWhiteSpace()
 let mapleader = "," 						" Remap leader to ','
 nnoremap <Leader>w :w<CR>
 map <C-c> :NERDTreeToggle<CR>
+
+"" Search for the current word
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+"" Search for the current selection
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+" Open Grepper-prompt for a particular Grep-alike tool
+nnoremap <Leader>g :Grepper -tool git<CR>
+nnoremap <Leader>G :Grepper -tool rg<CR>
 
 " Insert Mode Maps
 "

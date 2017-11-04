@@ -4,8 +4,6 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 " defaults everyone can agree on
 call minpac#add('tpope/vim-sensible')
-" async build and test dispatcher
-call minpac#add('tpope/vim-dispatch')
 " lean & mean status/tabline for vim
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')

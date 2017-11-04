@@ -14,7 +14,9 @@ brew "tmux"
 brew "vim", args: ["override-system-vi"]
 brew "nvim"
 
+brew "fzf"
 brew "ripgrep"
+
 brew "git"
 brew "git-lfs"
 brew "imagemagick", args: ["with-webp"]

@@ -2,8 +2,9 @@ packadd minpac
 call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-" defaults everyone can agree on
 call minpac#add('tpope/vim-sensible')
+call minpac#add('junegunn/fzf')
+
 " lean & mean status/tabline for vim
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
@@ -44,6 +45,9 @@ call minpac#add('editorconfig/editorconfig-vim')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
+
+" ensure fzf is installed in homebrew
+set rtp+=/usr/local/opt/fzf
 
 syntax enable
 

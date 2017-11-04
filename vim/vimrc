@@ -44,6 +44,9 @@ call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('jparise/vim-graphql')
 call minpac#add('editorconfig/editorconfig-vim')
 
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
 syntax enable
 
 " causes issues when the syntax in the file contains mode line keywords

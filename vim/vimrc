@@ -7,6 +7,7 @@ call minpac#add('junegunn/fzf')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('radenling/vim-dispatch-neovim')
+call minpac#add('w0rp/ale')
 
 " lean & mean status/tabline for vim
 call minpac#add('vim-airline/vim-airline')
@@ -19,8 +20,6 @@ call minpac#add('tpope/vim-rhubarb')
 call minpac#add('airblade/vim-gitgutter')
 " tree explorer
 call minpac#add('scrooloose/nerdtree')
-" syntax checking hacks
-call minpac#add('scrooloose/syntastic')
 " multiple selection Sublime style
 call minpac#add('terryma/vim-multiple-cursors')
 " quoting/parenthesizing made simple
@@ -47,8 +46,18 @@ command! PackClean call minpac#clean()
 
 " ensure fzf is installed in homebrew
 set rtp+=/usr/local/opt/fzf
-
 let $FZF_DEFAULT_COMMAND='rg --files'
+
+" ALE syntax checking
+" For JavaScript files, use `eslint` (and only eslint)
+let g:ale_linters = {
+      \ 'javascript': ['eslint'],
+      \ }
+" Mappins in the style of unimpaired-next
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
 
 syntax enable
 
@@ -141,17 +150,9 @@ let g:airline_theme='powerlineish'
 " SuperTab Completion Plugin
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0             " Don't check on open
-let g:syntastic_check_on_wq = 0
-let g:syntastic_html_tidy_exec = 'tidy5'      " Use HTML5
-" fixes opening golang files with syntastic
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:go_list_type = "quickfix"
 
 " vim-go
+let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 " let g:go_highlight_functions = 1
 " let g:go_highlight_methods = 1

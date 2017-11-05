@@ -17,6 +17,12 @@ bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
+# Pane resizing panes with Prefix H,J,K,L
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
 # Set the base index for windows to 1 instead of 0
 set -g base-index 1
 set -g pane-base-index 1

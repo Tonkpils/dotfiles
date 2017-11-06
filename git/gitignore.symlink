@@ -20,9 +20,10 @@ tags
 .DS_Store?
 #._*
 
-# IDE Files #
+# Editor Files #
 #############
 .idea/
+.projections.json
 
 # Misc #
 ########

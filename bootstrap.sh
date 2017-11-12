@@ -69,6 +69,7 @@ else
 fi
 
 source $HOME/.zsrch
+vim +PackUpdate +qall
 
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"

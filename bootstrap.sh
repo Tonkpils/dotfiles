@@ -2,6 +2,12 @@
 
 cd $(dirname "${BASH_SOURCE}");
 
+echo "- Fetching latest dotfiles"
+git pull origin master;
+
+echo "- Updating submodules"
+git submodule update --init --recursive --remote --merge;
+
 if [ ! -f $HOME/.env_vars ]; then
   echo "=== Creating ~/.env_vars ==="
   echo "# Exported environment variables in this file will be automatically loaded" >> $HOME/.env_vars
@@ -26,7 +32,6 @@ fi
 
 WORKDIR=$(pwd)
 
-git pull origin master;
 
 ## Install Symlinks
 echo "- Installing symlinks"

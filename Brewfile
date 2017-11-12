@@ -10,9 +10,12 @@ brew "coreutils"
 brew "gpg2"
 brew "gpg-agent"
 
+brew "python3"
+brew "go"
+
 brew "tmux"
 brew "vim", args: ["override-system-vi"]
-brew "nvim"
+brew "neovim"
 
 brew "fzf"
 brew "ripgrep"
@@ -23,5 +26,3 @@ brew "imagemagick", args: ["with-webp"]
 brew "tree"
 brew "hub"
 
-brew "python3"
-brew "go"

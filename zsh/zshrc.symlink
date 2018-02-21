@@ -43,7 +43,7 @@ export NVM_DIR="$HOME/.nvm"
 # Possible plugins
 # - frontend-search
 # - git-flow-avh
-plugins=(git bundler rake dirspersist docker docker-compose colored-man-pages ember-cli emoji gpg-agent history iwhois postgres)
+plugins=(git bundler rake dirspersist docker docker-compose colored-man-pages emoji gpg-agent history iwhois postgres)
 
 source $ZSH/oh-my-zsh.sh
 

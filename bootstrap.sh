@@ -68,7 +68,7 @@ else
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-source $HOME/.zsrch
+source $HOME/.zshrc
 vim +PackUpdate +qall
 
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"

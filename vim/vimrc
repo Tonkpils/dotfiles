@@ -29,8 +29,6 @@ call minpac#add('terryma/vim-multiple-cursors')
 call minpac#add('tpope/vim-surround')
 " perform all your vim insert mode completions with Tab
 call minpac#add('ervandew/supertab')
-" navigate files at the speed of Vim
-call minpac#add('dsawardekar/portkey')
 " a solid language pack
 call minpac#add('sheerun/vim-polyglot')
 
@@ -180,7 +178,6 @@ imap <C-F> <C-R>=expand("%")<CR>
 set number
 set numberwidth=4
 
-
 " Airline Plugin
 " let g:airline_section_b = '%{fugitive#statusline()}'
 let g:airline#extensions#tabline#enabled = 1
@@ -192,7 +189,6 @@ let g:airline_theme='powerlineish'
 
 " SuperTab Completion Plugin
 let g:SuperTabDefaultCompletionType = "context"
-
 
 " vim-go
 let g:go_list_type = "quickfix"

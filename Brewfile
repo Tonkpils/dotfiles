@@ -1,3 +1,6 @@
+cask "google-chrome"
+cask "1password"
+cask "1password-cli"
 cask "iterm2"
 cask "slack"
 cask "docker"

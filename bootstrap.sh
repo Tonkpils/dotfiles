@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 cd $(dirname "${BASH_SOURCE}");
 
@@ -22,11 +22,14 @@ fi
 
 echo "=== Checking brew bundle ==="
 brew bundle check &> /dev/null
-if [ -z $? ]
+if [ $? -eq 0 ]
 then
   echo "=== Brews already installed ==="
 else
   echo "=== Installing brew bundle ==="
+  echo "  Changing ownership of $(brew --prefix) to $(whoami)"
+  sudo chown -R $(whoami) $(brew --prefix)/*
+  echo "  Running brew bundle install"
   brew bundle install
 fi
 

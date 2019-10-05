@@ -76,3 +76,9 @@ vim +PackUpdate +qall
 
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
+
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts

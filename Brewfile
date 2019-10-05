@@ -15,7 +15,7 @@ brew "python3"
 brew "go"
 
 brew "tmux"
-brew "vim", args: ["override-system-vi"]
+brew "vim"
 brew "neovim"
 
 brew "fzf"
@@ -23,7 +23,7 @@ brew "ripgrep"
 
 brew "git"
 brew "git-lfs"
-brew "imagemagick", args: ["with-webp"]
+brew "imagemagick"
 brew "tree"
 brew "hub"
 

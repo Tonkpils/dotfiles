@@ -27,3 +27,4 @@ brew "imagemagick"
 brew "tree"
 brew "hub"
 
+brew "nvm"

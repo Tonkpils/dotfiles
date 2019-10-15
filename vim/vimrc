@@ -1,3 +1,6 @@
+" Turn on spell check
+autocmd BufRead,BufNewFile *.md setlocal spell
+
 set undofile
 augroup vimrc
   autocmd BufWritePre /tmp/* setlocal noundofile

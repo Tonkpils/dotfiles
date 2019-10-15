@@ -1,3 +1,5 @@
+# To profile, uncomment this next line and the last line on this file
+# zmodload zsh/zprof
 # shortcut to dotfiles path is $ZSH
 ZSH=$HOME/.oh-my-zsh
 
@@ -87,3 +89,5 @@ bindkey '^D' delete-char
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# eval "$(rbenv init -)"
+# zprof

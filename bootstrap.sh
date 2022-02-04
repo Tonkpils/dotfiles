@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+exec > >(tee -i $HOME/dotfiles_install.log)
+exec 2>&1
+set -x
+
 cd $(dirname "${BASH_SOURCE}");
 
 echo "- Fetching latest dotfiles"

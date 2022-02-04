@@ -28,7 +28,7 @@ call minpac#add('terryma/vim-multiple-cursors')
 " quoting/parenthesizing made simple
 call minpac#add('tpope/vim-surround')
 " a solid language pack
-call minpac#add('sheerun/vim-polyglot')
+call minpac#add('sheerun/vim-polyglot', { 'rev': 'v4.16.0' })
 
 call minpac#add('fatih/vim-go')
 
@@ -40,6 +40,8 @@ call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('jparise/vim-graphql')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('vim-syntastic/syntastic')
+
+call minpac#add('github/copilot.vim')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()

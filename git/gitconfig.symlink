@@ -45,7 +45,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg
 [github]
 	user = Tonkpils
 [credential]

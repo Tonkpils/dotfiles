@@ -6,11 +6,8 @@ exec > >(tee -i $HOME/dotfiles_install.log)
 exec 2>&1
 set -x
 
-# sudo apt-get update -y
-
-sudo apt-get install neovim
-sudo apt-get install python-neovim
-sudo apt-get install python3-neovim
+sudo apt-get update -y
+sudo apt-get -y install neovim python-neovim python3-neovim
 
 WORKDIR=$(pwd)
 

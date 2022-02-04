@@ -7,6 +7,7 @@ exec 2>&1
 set -x
 
 sudo apt-get update -y
+sudo apt-get -y install zsh
 sudo apt-get -y install neovim
 sudo apt-get -y install python-neovim
 sudo apt-get -y install python3-neovim
@@ -42,8 +43,6 @@ mkdir -p "$HOME/.config"
 ln -sfn "$WORKDIR/nvim/"  "$HOME/.config/"
 echo "--- Installing python3 support"
 pip3 install --user --upgrade neovim
-echo "--- Installing ruby support"
-gem install "neovim"
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "Oh My ZSH found at ~/.oh-my-zsh"
@@ -51,6 +50,8 @@ else
   echo "=== Installing Oh My Zsh ==="
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+sudo chsh -s "$(which zsh)" "$(whoami)"
 
 source $HOME/.zshrc
 # vim +PackUpdate +qall

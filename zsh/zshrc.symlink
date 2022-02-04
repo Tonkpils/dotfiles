@@ -9,7 +9,7 @@ DOTFILES=$HOME/.dotfiles
 export PATH="/usr/local/sbin:$DOTFILES/bin:$PATH"
 
 # source all the zsh files
-for config_file ($DOTFILES/**/*.zsh) source $config_file
+for config_file ($DOTFILES/**/*/*.zsh) source $config_file
 
 # Set the name of the theme to load
 # look in ~/.oh-my-zsh/themes/
@@ -36,9 +36,6 @@ ZSH_THEME='tonkpils'
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)

@@ -26,5 +26,3 @@ brew "git-lfs"
 brew "imagemagick"
 brew "tree"
 brew "hub"
-
-brew "nodenv"

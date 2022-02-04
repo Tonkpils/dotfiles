@@ -25,6 +25,11 @@ done
 
 mkdir -p "$HOME/.dotfiles"
 ln -sfn "$WORKDIR/zsh" "$HOME/.dotfiles/zsh"
+ln -sfn "$WORKDIR/git" "$HOME/.dotfiles/git"
+ln -sfn "$WORKDIR/go" "$HOME/.dotfiles/go"
+ln -sfn "$WORKDIR/javascript" "$HOME/.dotfiles/javascript"
+ln -sfn "$WORKDIR/nvim" "$HOME/.dotfiles/nvim"
+
 
 ## Setup vim
 echo "- Configuring editors (vim/neovim)"
@@ -53,8 +58,8 @@ source $HOME/.zshrc
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
 
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
+# git clone https://github.com/powerline/fonts.git --depth=1
+# cd fonts
+# ./install.sh
+# cd ..
+# rm -rf fonts

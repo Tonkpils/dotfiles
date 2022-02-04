@@ -6,8 +6,12 @@ exec > >(tee -i $HOME/dotfiles_install.log)
 exec 2>&1
 set -x
 
+git pull origin master
+git submodule update --init --recursive --remote --merge
+
 sudo apt-get update -y
 sudo apt-get -y install zsh
+sudo apt-get -y install hub
 sudo apt-get -y install neovim
 sudo apt-get -y install python-neovim
 sudo apt-get -y install python3-neovim

@@ -35,6 +35,12 @@ ln -sfn "$WORKDIR/go" "$HOME/.dotfiles/go"
 ln -sfn "$WORKDIR/javascript" "$HOME/.dotfiles/javascript"
 ln -sfn "$WORKDIR/nvim" "$HOME/.dotfiles/nvim"
 
+echo "- Installing symlinks"
+for src in $(find -H "$WORKDIR" -maxdepth 2 -name '*.symlink'); do
+  dst="$HOME/.$(basename "${src%.*}")"
+  ln -s "$src" "$dst"
+  echo "success linking $src to $dst"
+done
 
 ## Setup vim
 echo "- Configuring editors (vim/neovim)"

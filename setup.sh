@@ -23,6 +23,9 @@ for src in $(find -H "$WORKDIR" -maxdepth 2 -name '*.symlink'); do
   echo "success linking $src to $dst"
 done
 
+mkdir -p "$HOME/.dotfiles"
+ln -sfn "$WORKDIR/zsh" "$HOME/.dotfiles/zsh"
+
 ## Setup vim
 echo "- Configuring editors (vim/neovim)"
 echo "$WORKDIR/vim/vimrc"

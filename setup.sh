@@ -1,41 +1,16 @@
 #!/usr/bin/env zsh
 
+# Run this script to setup in a ubuntu machine / codespaces
+
 exec > >(tee -i $HOME/dotfiles_install.log)
 exec 2>&1
 set -x
 
-cd $(dirname "${BASH_SOURCE}");
+sudo apt-get update -y
 
-echo "- Fetching latest dotfiles"
-git pull origin master;
-
-echo "- Updating submodules"
-git submodule update --init --recursive --remote --merge;
-
-if [ ! -f $HOME/.env_vars ]; then
-  echo "=== Creating ~/.env_vars ==="
-  echo "# Exported environment variables in this file will be automatically loaded" >> $HOME/.env_vars
-fi
-
-## Install homebrew
-if  test ! $(which brew); then
-  echo "=== Installing Homebrew ==="
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-
-echo "=== Checking brew bundle ==="
-brew bundle check &> /dev/null
-if [ $? -eq 0 ]
-then
-  echo "=== Brews already installed ==="
-else
-  echo "=== Installing brew bundle ==="
-  echo "  Changing ownership of $(brew --prefix) to $(whoami)"
-  sudo chown -R $(whoami) $(brew --prefix)/*
-  echo "  Running brew bundle install"
-  brew bundle install
-fi
+sudo apt-get install neovim
+sudo apt-get install python-neovim
+sudo apt-get install python3-neovim
 
 WORKDIR=$(pwd)
 
@@ -61,11 +36,6 @@ echo "--- Installing python3 support"
 pip3 install --user --upgrade neovim
 echo "--- Installing ruby support"
 gem install "neovim"
-
-## Setup Tmux
-mkdir -p $HOME/.tmux/plugins/
-rm -rf $HOME/.tmux/plugins/tpm
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   echo "Oh My ZSH found at ~/.oh-my-zsh"

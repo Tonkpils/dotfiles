@@ -7,7 +7,10 @@ exec 2>&1
 set -x
 
 sudo apt-get update -y
-sudo apt-get -y install neovim python-neovim python3-neovim
+sudo apt-get -y install neovim
+sudo apt-get -y install python-neovim
+sudo apt-get -y install python3-neovim
+
 
 WORKDIR=$(pwd)
 
@@ -16,7 +19,7 @@ echo "- Installing symlinks"
 for src in $(find -H "$WORKDIR" -maxdepth 2 -name '*.symlink'); do
   echo $src
   dst="$HOME/.$(basename "${src%.*}")"
-  ln -s "$src" "$dst"
+  ln -sf "$src" "$dst"
   echo "success linking $src to $dst"
 done
 

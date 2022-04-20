@@ -12,7 +12,13 @@ git submodule update --init --recursive --remote --merge
 sudo apt-get update -y
 sudo apt-get -y install zsh
 sudo apt-get -y install hub
-sudo apt-get -y install neovim
+
+# Install nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv squashfs-root /
+ln -s /squashfs-root/AppRun /usr/bin/nvim
+
 sudo apt-get -y install python-neovim
 sudo apt-get -y install python3-neovim
 

@@ -75,6 +75,11 @@ sudo chsh -s "$(which zsh)" "$(whoami)"
 source $HOME/.zshrc
 vim +PackUpdate +qall
 
+if [[ ! -z "$CODESPACES" ]]
+then
+  git config --file $HOME/.gitconfig --unset gpg.program
+fi
+
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
 

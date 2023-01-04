@@ -1,4 +1,4 @@
 .netrwhist
 vim/pack/**
-!vim/pack/minpac/opt/
-
+!nvim/pack/minpac/opt/
+*.appimage

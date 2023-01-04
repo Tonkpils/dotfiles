@@ -44,6 +44,8 @@ call minpac#add('vim-syntastic/syntastic')
 
 call minpac#add('github/copilot.vim')
 
+call minpac#add('akinsho/toggleterm.nvim', { 'tag': 'v2.*' })
+
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 

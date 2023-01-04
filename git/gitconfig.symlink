@@ -35,7 +35,7 @@
 	untracked = red bold
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 [help]
 	autocorrect = 1
 [push]
@@ -53,3 +53,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[init]
+	defaultBranch = main

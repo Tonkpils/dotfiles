@@ -85,3 +85,7 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+
+## Setup nvm for node management
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

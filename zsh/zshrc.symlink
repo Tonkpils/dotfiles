@@ -84,7 +84,9 @@ bindkey '^?' backward-delete-char
 bindkey '^D' delete-char
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-eval "$(rbenv init -)"
+if [ -z "$CODESPACES" ]; then
+  eval "$(rbenv init -)"
+fi
 # zprof
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

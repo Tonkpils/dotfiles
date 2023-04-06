@@ -45,6 +45,13 @@ call minpac#add('github/copilot.vim')
 
 call minpac#add('akinsho/toggleterm.nvim', { 'tag': 'v2.*' })
 
+call minpac#add('vim-ctrlspace/vim-ctrlspace')
+
+call minpac#add('NLKNguyen/papercolor-theme')
+call minpac#add('rebelot/kanagawa.nvim')
+call minpac#add('EdenEast/nightfox.nvim')
+
+
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 

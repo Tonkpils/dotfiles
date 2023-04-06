@@ -1,6 +1,10 @@
 " Turn on spell check
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+set nocompatible
+set hidden
+set encoding=utf-8
+
 set undofile
 augroup vimrc
   autocmd BufWritePre /tmp/* setlocal noundofile
@@ -11,10 +15,11 @@ set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 " ALE syntax checking
-"" For JavaScript files, use `eslint` (and only eslint)
+" For JavaScript files, use `eslint` (and only eslint)
 let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ }
+let g:airline#extensions#ale#enabled = 1
 
 " Grepper
 let g:grepper = {}
@@ -29,8 +34,9 @@ syntax enable
 " so we disable it
 set modelines=0
 
-colorscheme molokai
-
+set background=dark
+" colorscheme molokai
+colorscheme carbonfox
 " No prompt for file changes outside Vim
 set autoread
 
@@ -126,13 +132,13 @@ set number
 set numberwidth=4
 
 " Airline Plugin
-" let g:airline_section_b = '%{fugitive#statusline()}'
+let g:airline_section_b = '%{fugitive#statusline()}'
+let g:airline_section_y = ''
+
 let g:airline#extensions#tabline#enabled = 1
-" auto populates the powerline fonts.
-" ensure powerline fonts are installed and iterm is using them as non ASCII
-" font
-let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+let g:airline_theme='wombat'
 
 " SuperTab Completion Plugin
 let g:SuperTabDefaultCompletionType = "context"
@@ -159,6 +165,8 @@ if $TERM_PROGRAM =~ "iTerm"
   let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 endif
+
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 lua << EOF
 require('toggleterm').setup{

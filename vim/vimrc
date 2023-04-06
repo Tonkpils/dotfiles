@@ -29,17 +29,6 @@ syntax enable
 " so we disable it
 set modelines=0
 
-" Syntastic options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let b:syntastic_mode = 'passive'
-
 colorscheme molokai
 
 " No prompt for file changes outside Vim

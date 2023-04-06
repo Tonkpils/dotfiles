@@ -40,7 +40,6 @@ call minpac#add('tpope/vim-endwise')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('jparise/vim-graphql')
 call minpac#add('editorconfig/editorconfig-vim')
-call minpac#add('vim-syntastic/syntastic')
 
 call minpac#add('github/copilot.vim')
 

@@ -65,6 +65,8 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 " Close vim if NERDTree is the only window left open
 au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeChDirMode=2
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeShowHidden = 1
 
 " White space madness
 au BufWinEnter * match ExtraWhitespace /\s\+$/

@@ -8,7 +8,7 @@ augroup END
 
 " ensure fzf is installed in homebrew
 set rtp+=/usr/local/opt/fzf
-let $FZF_DEFAULT_COMMAND='rg --files'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 " ALE syntax checking
 "" For JavaScript files, use `eslint` (and only eslint)

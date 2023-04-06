@@ -32,6 +32,11 @@ ZSH_THEME='tonkpils'
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
 [ -f ~/.env_vars ] && source ~/.env_vars
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
@@ -42,7 +47,10 @@ export PATH="/usr/local/bin:$PATH"
 # Possible plugins
 # - frontend-search
 # - git-flow-avh
-plugins=(git bundler rake docker docker-compose colored-man-pages emoji gpg-agent history)
+# TODO ensure zsh-nvm is installed via custom plugins for ZSH
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+plugins=(zsh-nvm gitfast bundler rake emoji gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,10 +95,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [ -z "$CODESPACES" ]; then
   eval "$(rbenv init -)"
 fi
-# zprof
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# zprof

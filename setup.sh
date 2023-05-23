@@ -70,6 +70,9 @@ else
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
+mkdir -p "$HOME/.oh-my-zsh/custom/themes"
+ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
+
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
 source $HOME/.zshrc
@@ -79,9 +82,6 @@ if [[ ! -z "$CODESPACES" ]]
 then
   git config --file $HOME/.gitconfig --unset gpg.program
 fi
-
-mkdir -p "$HOME/.oh-my-zsh/custom/themes"
-ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
 
 # git clone https://github.com/powerline/fonts.git --depth=1
 # cd fonts

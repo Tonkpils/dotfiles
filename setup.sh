@@ -76,7 +76,7 @@ ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/th
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
 source $HOME/.zshrc
-vim +PackUpdate +qall
+nvim --headless -c 'call minpac#clean()' -c 'call minpac#update("", {"do": "quit"})' +qall
 
 if [[ ! -z "$CODESPACES" ]]
 then

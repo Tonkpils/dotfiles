@@ -74,7 +74,7 @@ else
 fi
 
 source $HOME/.zshrc
-vim +PackUpdate +qall
+nvim --headless -c 'call minpac#clean()' -c 'call minpac#update("", {"do": "quit"})' +qall
 
 mkdir -p "$HOME/.oh-my-zsh/custom/themes"
 ln -s "$WORKDIR/oh-my-zsh/custom/tonkpils.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"

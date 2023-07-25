@@ -16,9 +16,10 @@ let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 " ALE syntax checking
 " For JavaScript files, use `eslint` (and only eslint)
-let g:ale_linters = {
-      \ 'javascript': ['eslint'],
-      \ }
+let g:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace']
+      \}
+let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 
 " Grepper
@@ -44,14 +45,6 @@ set autoread
 set nobackup
 set noswapfile
 
-" WhiteSpace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
-function! TrimWhiteSpace()
-  %s/\s\+$//e
-endfunction
-
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
 set expandtab
@@ -73,13 +66,6 @@ au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType 
 let g:NERDTreeChDirMode=2
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
-
-" White space madness
-au BufWinEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhitespace /\s\+$/
-au BufWinLeave * call  clearmatches()
-au BufWritePre * :call TrimWhiteSpace()
 
 " Mappings
 "

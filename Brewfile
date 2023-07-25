@@ -12,6 +12,8 @@ brew "gpg2"
 
 brew "python3"
 brew "go"
+brew "rbenv"
+brew "ruby-build"
 
 brew "tmux"
 brew "neovim"

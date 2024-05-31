@@ -22,6 +22,11 @@ Ensure you run C-I in a tmux session to install all plugins
 
 Plugins are managed through Vundle. The list of plugins can be found in `vim/vimrc`.
 
+### Authenticate GitHub
+
+- Setup GPG keys
+- `gh auth login` and `gh auth setup-git`
+
 # TODO
 
 - Setup SSH keys and add to Github and Heroku

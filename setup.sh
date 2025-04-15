@@ -13,14 +13,19 @@ sudo apt-get update -y
 sudo apt-get -y install zsh
 sudo apt-get -y install hub
 
-# Install nvim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage --appimage-extract
-./squashfs-root/AppRun --version
-sudo mv squashfs-root /
-sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-rm nvim.appimage
+# Check if Neovim is already installed
+if command -v nvim &> /dev/null; then
+  echo "Neovim is already installed. Skipping installation."
+else
+  echo "Installing Neovim..."
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  ./nvim.appimage --appimage-extract
+  ./squashfs-root/AppRun --version
+  sudo mv squashfs-root /
+  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+  rm nvim.appimage
+fi
 
 sudo apt-get -y install python-neovim
 sudo apt-get -y install python3-neovim
